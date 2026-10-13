@@ -1,0 +1,8 @@
+node_modules/
+app/node_modules/
+app/dist/
+.env*
+
+# Tes données personnelles (liste de tes enregistrements, résumés) restent sur ton ordi.
+data/
+.claude/
