@@ -16,7 +16,7 @@ Puis ouvre http://localhost:3000 dans Chrome et connecte-toi avec ton email (lie
 | Partie | Où |
 |---|---|
 | Interface (React, Tailwind, Framer Motion) | `app/` |
-| Base de données, connexion, stockage privé des vidéos | Supabase, projet `memoire-insta` |
+| Base de données, connexion, stockage privé des vidéos | Supabase, projet `memoire-insta` (schéma : `supabase/schema.sql`) |
 | Ajout de liens, import, résumé IA (Claude) | `supabase/functions/api/index.ts` |
 | Synchro Instagram (favori à glisser) | `app/src/lib/syncScript.ts` |
 | Résumés des 69 premiers posts IA | `data/` (local uniquement, hors du dépôt) |

@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js'
 
 // Clés publiques (faites pour le navigateur) : l'accès aux données est verrouillé par les règles RLS côté base.
-export const SUPABASE_URL = 'https://ysybtxxngygsaaxfqtdn.supabase.co'
-const PUBLISHABLE_KEY = 'sb_publishable__kSUy3lis6Bc80UAVcXPLA_I8P60H73'
+export const SUPABASE_URL = 'https://afdofklqpwmnltagxvxb.supabase.co'
+const PUBLISHABLE_KEY = 'sb_publishable_R1wZkuS_aZBdJPB4_-9ZBw_3FslsJli'
 
 export const supabase = createClient(SUPABASE_URL, PUBLISHABLE_KEY, {
   auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true },
