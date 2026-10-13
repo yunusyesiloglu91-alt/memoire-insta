@@ -5,7 +5,10 @@ import { createClient, type SupabaseClient } from "npm:@supabase/supabase-js@2";
 import Anthropic from "npm:@anthropic-ai/sdk";
 
 const SUPABASE_URL = Deno.env.get("SUPABASE_URL")!;
-const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+// Projets récents : les clés secrètes sont fournies en JSON dans SUPABASE_SECRET_KEYS.
+const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || (() => {
+  try { return Object.values(JSON.parse(Deno.env.get("SUPABASE_SECRET_KEYS") ?? "{}"))[0] as string; } catch { return ""; }
+})();
 const ANTHROPIC_KEY = Deno.env.get("ANTHROPIC_API_KEY");
 
 const cors = {
